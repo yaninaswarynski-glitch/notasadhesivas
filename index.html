@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Organizador de tareas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>Organizador de tareas</h1>
+
+<main class="app">
+  <section class="panel-form" aria-labelledby="t-nueva">
+    <h2 id="t-nueva">Nueva tarea</h2>
+    <form id="form" novalidate>
+      <div class="field">
+        <label for="materia">Nombre de la materia</label>
+        <input id="materia" type="text" maxlength="40" placeholder="Ej.: Matemática" autocomplete="off">
+      </div>
+      <div class="field">
+        <label for="tarea">Tarea pendiente</label>
+        <input id="tarea" type="text" maxlength="90" placeholder="Ej.: Resolver los ejercicios 4 al 10" autocomplete="off">
+      </div>
+      <div class="field">
+        <label for="fecha">Fecha límite</label>
+        <input id="fecha" type="date">
+      </div>
+      <div class="actions">
+        <span class="msg" id="msg" role="alert" aria-live="polite"></span>
+        <button class="btn-add" type="submit">AGREGAR</button>
+      </div>
+    </form>
+  </section>
+
+  <section aria-label="Pizarra de tareas">
+    <div class="board-wrap">
+      <div class="board" id="board">
+        <div class="empty" id="empty">Tu pizarra está vacía. Completá el formulario y tocá AGREGAR para pegar tu primera nota.</div>
+      </div>
+    </div>
+    <p class="hint">Mové las notas arrastrándolas dentro de la pizarra. Para eliminar una, soltala fuera de la pizarra o tocá el tacho.</p>
+  </section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
